@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Bài 4: Thống kê số lần xuất hiện của mỗi phần tử trong 1 chuỗi nhập vào
+<script>
+  let s = "vanhang"
+  let danhdau = new Array(256)
+
+  for (let i = 0; i < s.length; i++) {
+    let so = s.charCodeAt(i)
+    if(isNaN(danhdau[so])) {
+      danhdau[so] = 1
+    } else {
+      danhdau[so] += 1
+    }
+  }
+
+  for (let i = 0; i <= 255; i++) {
+    if(isNaN(danhdau[i]) == false) {
+      console.log((String.fromCharCode(i)) + " so lan xuat hien la " + danhdau[i])
+    }
+  }
+</script>
+</body>
+</html>
